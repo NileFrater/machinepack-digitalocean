@@ -1,0 +1,37 @@
+{
+  "name": "machinepack-digitalocean",
+  "version": "0.1.0",
+  "description": "Communicate with the DigitalOcean API to create, destroy, list and work with droplets.",
+  "scripts": {
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+  },
+  "keywords": [
+    "Digital Ocean",
+    "machines",
+    "machinepack"
+  ],
+  "author": "Nile Frater",
+  "license": "MIT",
+  "dependencies": {
+    "dropkit": "^0.9.4",
+    "machine": "^3.0.0"
+  },
+  "devDependencies": {
+    "test-machinepack-mocha": "^0.2.2"
+  },
+  "machinepack": {
+    "friendlyName": "Digital Ocean",
+    "imageSrc": "http://nilefrater.co.uk/css/images/rsz_do_ssd_power_badge_blue-077bf22e.png",
+    "machineDir": "machines/",
+    "machines": [
+      "say-hello",
+      "droplet-create",
+      "droplet-list",
+      "droplet-get-backups",
+      "droplet-delete",
+      "droplet-get-snapshots",
+      "droplet-get",
+      "droplet-action"
+    ]
+  }
+}
