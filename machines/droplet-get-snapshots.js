@@ -31,9 +31,29 @@ module.exports = {
       response: 'No response'
     },
     success: {
-      description: 'An unexpected error occurred.',
-      statuscode: '200',
-      response: 'Response from API v2'
+      example: {
+  "snapshots": [
+    {
+      "id": 7938206,
+      "name": "nginx-fresh",
+      "distribution": "Ubuntu",
+      "slug": null,
+      "public": false,
+      "regions": [
+        "nyc3",
+        "nyc3"
+      ],
+      "created_at": "2014-11-14T16:37:34Z",
+      "type": "snapshot",
+      "min_disk_size": 20
+    }
+  ],
+  "links": {
+  },
+  "meta": {
+    "total": 1
+  }
+}
     }
   },
 
