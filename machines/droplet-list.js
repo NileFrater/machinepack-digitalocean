@@ -1,6 +1,6 @@
 module.exports = {
 
-  friendlyName: 'List Droplet Info',
+  friendlyName: 'List All Droplets Info',
   description: 'List information on all droplets in your DigitalOcean account.',
   extendedDescription: 'You can find documentation for this API here: https://developers.digitalocean.com/documentation/v2/ and raise issues here: Github.com/NileFrater/machinepack-digitalocean.',
 
