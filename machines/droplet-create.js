@@ -68,10 +68,51 @@ module.exports = {
       response: 'Response from API v2'
     },
     success: {
-      description: 'An unexpected error occurred.',
-      statuscode: '302',
-      response: 'Response from API v2'
-    }
+        example: {
+            "droplet": {
+              "id": 3164494,
+              "name": "example.com",
+              "memory": 512,
+              "vcpus": 1,
+              "disk": 20,
+              "locked": true,
+              "status": "new",
+              "kernel": {
+                "id": 2233,
+                "name": "Ubuntu 14.04 x64 vmlinuz-3.13.0-37-generic",
+                "version": "3.13.0-37-generic"
+              },
+              "created_at": "2014-11-14T16:36:31Z",
+              "features": [
+                "virtio"
+              ],
+              "backup_ids": [
+
+              ],
+              "snapshot_ids": [
+
+              ],
+              "image": {
+              },
+              "size": {
+              },
+              "size_slug": "512mb",
+              "networks": {
+              },
+              "region": {
+              }
+            },
+            "links": {
+              "actions": [
+                {
+                  "id": 36805096,
+                  "rel": "create",
+                  "href": "https://api.digitalocean.com/v2/actions/36805096"
+                }
+              ]
+            }
+          }
+        }
   },
 
   fn: function (inputs, exits) {
@@ -92,11 +133,7 @@ module.exports = {
         console.log(error.statusCode);
         console.log(error.res);
         // DO API v2 returns both a status code and a response in JSON format.
-        return exits.success({
-            description: "Droplet Successfully created!",
-            statuscode: error.statusCode,
-            response: error.res
-        });
+        return exits.success(error.res);
       });
 
 
